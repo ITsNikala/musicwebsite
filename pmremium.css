@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    background: none;
+    list-style: none;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: 'Lato-Bold.ttf', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+@font-face{
+    font-family: 'Lato-Bold.ttf';
+    src: url(./Lato-Bold.ttf);
+}
+
+::-webkit-scrollbar { width: 14px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    background-color: rgba(131, 131, 131, 0.3) !important; 
+    border-radius: 10px;
+    border: 3px solid transparent; 
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: rgba(112, 112, 112, 0.8) !important; }
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    gap: 25px;
+}
+
+nav a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    color: #1ED760;
+}
+
+header a:has(.fa-spotify){
+    color: var(--font-main);
+}
+
+:root {
+  color-scheme: dark;
+  --bg-black: #000000;
+  --bg-dark: #1f1f1f;
+  --bg-dark-hover: #292929;
+  --text-main: #ffffff;
+  --text-muted: #bbbbbb;
+  --text-gray: #929292;
+  --spotify-green: #1DB954;
+  --spotify-green-hover: #1ed760;
+  --font-main: 'Lato', sans-serif;
+}
+
+.fa-spotify{
+    font-size: 29px;
+    cursor: pointer;
+    color: white;
+}
+
+header a:has(.fa-spotify){
+    font-size: 20px;
+}
+
+.mobile {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--spotify-green);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+.i-stuped{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+    padding: 60px 10%;
+    min-height: 70vh;
+}
+
+.card{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.card h1{
+    font-size: 45px;
+    line-height: 1.2;
+}
+
+.card h4 {
+    color: #b3b3b3;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 12px;
+    color: grey;
+}
+
+.mariiiiiii{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.btn-1{
+    padding: 14px 28px;
+    border-radius: 50px;
+    background-color: #FDA22B;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s ease, background-color 0.2s;
+    cursor: pointer;
+    color: black;
+}
+
+.btn-2{
+    padding: 14px 28px;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    border: 2px solid grey;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s ease, border-color 0.2s;
+    cursor: pointer;
+}
+
+.btn-1:hover{ background-color: #FEAF43; transform: scale(1.03); }
+.btn-2:hover{ border-color: white; transform: scale(1.03); }
+
+.i-stuped img{
+    width: 280px;
+    height: 280px;
+}
+
+.h12{
+    text-align: center;
+    margin: 80px 20px 40px;
+}
+
+.h12 h1 { font-size: 40px; margin-bottom: 10px; }
+.h12 h3 { color: #b3b3b3; font-weight: normal; }
+
+.divs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1300px;
+    margin:auto;
+}
+
+.divs div[class^="curd"] {
+    width: 280px;
+    min-height: 500px;
+    background-color: #3a3a3a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 10px;
+    gap: 6px;
+}
+
+.divs div[class^="curd"] h2 { font-size: 24px; }
+.divs div[class^="curd"] h4 { color: #b3b3b3; font-size: 14px; }
+.divs div[class^="curd"] p { font-size: 12px; color: #a7a7a7; margin-top: auto; }
+
+.curd1 h2{ color: #FFD2D7; }
+.curd2 h2{ color: #C4B1D4; }
+.curd3 h2{ color: #FFC862; }
+.curd4 h2{ color: #A5BBD1; }
+
+.divs button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s;
+}
+
+.divs button:hover{transform: scale(1.02);}
+
+.button1{ background-color: #FFD2D7; color: black;}
+.button2{ background-color: #C4B1D4; color: black;}
+.button3{ background-color: #FFC862; color: black;}
+.button4{ background-color: #A5BBD1; color: black;}
+
+.fa-pen-fancy { font-size: 24px; color: white; }
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.icons i { color: white; transition: color 0.2s; }
+.icons i:hover { color: #1ED760; }
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    padding: 60px 40px;
+    border-top: 1px solid #282828;
+    margin-top: 50px;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 160px;
+}
+
+footer h2{
+    color: #737373;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+footer a{
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s;
+    width: fit-content;
+}
+footer a:hover{ color: #1ED760; }
+
+@media (max-width: 1024px) {
+    .i-stuped {
+        gap: 40px;
+        padding: 40px 5%;
+    }
+    
+    .card h1 { font-size: 36px; }
+    
+    .divs div[class^="curd"] {
+        width: calc(50% - 24px);
+    }
+    
+    footer {
+        justify-content: flex-start;
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 820px) {
+header nav > a, 
+  header nav > button {
+    display: none;
+  }
+  
+  .mobile { 
+    display: flex; 
+    z-index: 102; 
+  }
+
+  header nav.active {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    width: 250px; 
+    height: 100vh;
+    background-color: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 25px; 
+    padding: 20px; 
+    z-index: 100;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  header nav.active a, 
+  header nav.active button {
+    display: block; 
+    font-size: 18px;
+  }
+
+  header nav.active .mobile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  header nav.active .hamburger svg {
+    transform: rotate(-45deg);
+  }
+
+  header nav.active .hamburger .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+    .i-stuped {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .card h1 { font-size: 28px; }
+    
+    .mariiiiiii {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-1, .btn-2 {
+        width: 100%;
+    }
+
+    .h12 {
+        margin: 60px 20px 30px;
+    }
+
+    .h12 h1 { font-size: 26px; }
+
+    .divs div[class^="curd"] {
+        width: 100%;
+        min-height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 40px;
+    }
+}

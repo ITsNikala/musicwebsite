@@ -1,0 +1,7 @@
+
+
+.list {
+  height: 84.3vh;          /* Fixed height container */
+  overflow-y: auto;         /* Scrolls vertically */
+  overflow-x: hidden;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Install App</title>
+    <link rel="icon" type="image/svg+xml" href="spotify.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./install-app.css">
+</head>
+<body>
+    
+    <header>
+
+    <a class="ghhh" href="./index.html"><i class="fa-brands fa-spotify"></i>Spotify</a>
+
+    <nav>
+        <a href="./premium.html">Premium plans</a>
+        <a href="./index.html">Home</a>
+        <a href="./create-by-my.html">Download</a>
+        <a href="./sgin-up.html">Sign up</a>
+        <a href="./login.html">Log in</a>
+
+        <div class="mobile">
+
+          <label class="hamburger">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label> 
+
+        </div>
+    </nav>
+
+ </header>
+
+ <main>
+    <div class="card">
+        <h1>Download Spotify</h1>
+        <div class="just">
+            <h2>Play millions of songs and </h2>
+            <h2>podcasts on your device.</h2>
+        </div>
+        
+        <a>Download directly from Spotify</a>
+    </div>
+ </main>
+
+ <section class="curd">
+    <div class="card-2">
+        <h2>Listen on mobile and tablet, too</h2>
+        <p>Using Spotify on your phone or tablet is free, easy, and fun.</p>
+        <div class="imgs">
+            <img src="./apple-logo.svg" alt="photo">
+            <img src="./google-pay.svg" alt="photo">
+            <img src="./microsoft.png" alt="photo">
+        </div>
+    </div>
+ </section>
+
+ <section class="navg">
+    <div class="boss">
+        <h2>One account, listen everywhere</h2>
+        <div class="as">  
+        <a href="">Mobile</a>
+        <a href="">Computer</a>
+        <a href="">Tablet</a>
+        <a href="">Car</a>
+        <a href="">PlayStation®</a>
+        <a href="">Xbox</a>
+        <a href="">TV</a>
+        <a href="">Speaker</a>
+        <a href="">Web Player</a>
+    </div>
+    </div>
+    
+ </section>
+
+ <footer>
+
+    <div>
+        <h2>Company</h2>
+        <a href="">About</a>
+        <a href="">Jobs</a>
+        <a href="">For the Record</a>
+    </div>
+
+    <div>
+        <h2>Communities</h2>
+        <a href="">For Artists</a>
+        <a href="">Developers</a>
+        <a href="">Advertising</a>
+        <a href="">Investors</a>
+        <a href="">Vendors</a>
+    </div>
+
+    <div>
+        <h2>Useful links</h2>
+        <a href="">Support</a>
+        <a href="">Web Player</a>
+        <a href="">Free Mobile App</a>
+        <a href="">Import your</a>
+        <a href="">music</a>
+    </div>
+
+    <div>
+        <h2>Spotify Plans</h2>
+        <a href="">Premium </a>
+        <a href="">Individual</a>
+        <a href="">Premium Duo</a>
+        <a href="">Premium Family</a>
+        <a href="">Premium </a>
+        <a href="">Student</a>
+        <a href="">Spotify Free</a>
+    </div>
+
+</footer>
+
+<script>
+    const checkbox = document.querySelector('.hamburger input');
+    const navMenu = document.querySelector('header nav');
+
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            navMenu.classList.add('active');
+        } else {
+        navMenu.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
